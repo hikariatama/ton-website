@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 
 body {
   background: #e6e7ee;
   font-family: Hubballi;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 #main {
@@ -10,14 +15,45 @@ body {
   flex-direction: column;
   align-items: center;
   z-index: 2;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
   height: fit-content;
   width: fit-content;
+}
+
+#comic-wrapper {
+  width: fit-content;
+  height: fit-content;
+  min-width: 500px;
+  min-height: 150px;
+  transition: all 0.2s ease;
+}
+
+#comic {
+  background: #e6e7ee;
+  padding: 15px 20px;
+  border-radius: 1rem;
+  box-shadow:
+    6px 6px 12px #b8b9be,
+    -6px -6px 18px #f6f6ff11,
+    -10px -10px 30px 0 #ffffffaa,
+    10px 10px 30px 0 rgba(174, 174, 192, 0.4),
+    inset -10px -10px 10px 0 rgba(174, 174, 192, 0.25),
+    inset 10px 10px 10px 0 #f6f6ffaa;
+}
+
+#comic-image {
+  height: 25vh;
+  filter: url(#replaceWhite);
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+#comic-title {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .biobox,
@@ -47,7 +83,7 @@ body {
 
 .biobox::before,
 .biobox::after {
-  content: "";
+  content: '';
   opacity: 0;
   transition: opacity 0.3s ease;
   position: absolute;
@@ -58,15 +94,20 @@ body {
 }
 
 .biobox::before {
-  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 18px #f6f6ff11,
-    -10px -10px 30px 0 #ffffffaa, 10px 10px 30px 0 rgba(174, 174, 192, 0.4),
+  box-shadow:
+    6px 6px 12px #b8b9be,
+    -6px -6px 18px #f6f6ff11,
+    -10px -10px 30px 0 #ffffffaa,
+    10px 10px 30px 0 rgba(174, 174, 192, 0.4),
     inset -10px -10px 10px 0 rgba(174, 174, 192, 0.25),
     inset 10px 10px 10px 0 #f6f6ffaa;
   opacity: 1;
 }
 
 .biobox::after {
-  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #f6f6ffee;
+  box-shadow:
+    inset 2px 2px 5px #b8b9be,
+    inset -3px -3px 7px #f6f6ffee;
 }
 
 .biobox:hover::after {
@@ -105,7 +146,7 @@ h1 {
 
 .chip::before,
 .chip::after {
-  content: "";
+  content: '';
   opacity: 0;
   transition: opacity 0.3s ease;
   position: absolute;
@@ -116,15 +157,20 @@ h1 {
 }
 
 .chip::before {
-  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 12px #f6f6ff11,
-    -5px -5px 15px 0 #ffffffaa, 5px 5px 15px 0 rgba(174, 174, 192, 0.4),
+  box-shadow:
+    3px 3px 6px #b8b9be,
+    -3px -3px 12px #f6f6ff11,
+    -5px -5px 15px 0 #ffffffaa,
+    5px 5px 15px 0 rgba(174, 174, 192, 0.4),
     inset -5px -5px 5px 0 rgba(174, 174, 192, 0.25),
     inset 5px 5px 5px 0 #f6f6ffaa;
   opacity: 1;
 }
 
 .chip::after {
-  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #f6f6ffee;
+  box-shadow:
+    inset 2px 2px 5px #b8b9be,
+    inset -3px -3px 7px #f6f6ffee;
 }
 
 .chip:hover::after {
@@ -183,7 +229,9 @@ li {
 
 .biobox,
 .chip {
-  box-shadow: 0 0 30px rgba(0, 0, 15, 0.05), 0 0 10px rgba(0, 0, 15, 0.05);
+  box-shadow:
+    0 0 30px rgba(0, 0, 15, 0.05),
+    0 0 10px rgba(0, 0, 15, 0.05);
 }
 
 .monoicon {
@@ -221,5 +269,15 @@ li {
   .chip:after {
     top: 0;
     left: 0;
+  }
+
+  #comic-wrapper {
+    min-width: auto;
+    width: 96vw;
+  }
+
+  #comic-image {
+    height: auto;
+    width: 100%;
   }
 }

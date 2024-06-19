@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>hikari. about</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="index.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="index.css"
+    />
     <link
       rel="icon"
       href="https://img.icons8.com/neon/96/like.png"
@@ -31,7 +37,11 @@
             </li>
           </ul>
           <div class="links-block">
-            <a href="https://t.me/hikariatama" class="link" target="_blank">
+            <a
+              href="https://t.me/hikariatama"
+              class="link"
+              target="_blank"
+            >
               <img
                 width="24"
                 height="24"
@@ -55,7 +65,11 @@
                 id="gh-link"
               />
             </a>
-            <a href="mailto:me@hikariatama.ru" class="link" target="_blank">
+            <a
+              href="mailto:me@hikariatama.ru"
+              class="link"
+              target="_blank"
+            >
               <img
                 width="24"
                 height="24"
@@ -69,44 +83,121 @@
         </div>
       </div>
       <div class="chips">
-        <a href="https://t.me/hikariatama" target="_blank">
+        <a
+          href="https://t.me/hikariatama"
+          target="_blank"
+        >
           <div class="chip">telegram</div>
         </a>
-        <a href="CV.pdf" target="_blank">
+        <a
+          href="CV.pdf"
+          target="_blank"
+        >
           <div class="chip">resumé</div>
         </a>
-        <a href="https://github.com/hikariatama" target="_blank">
+        <a
+          href="https://github.com/hikariatama"
+          target="_blank"
+        >
           <div class="chip">github</div>
         </a>
       </div>
       <div class="chips">
-        <a href="https://hikka.pw" target="_blank">
+        <a
+          href="https://hikka.pw"
+          target="_blank"
+        >
           <div class="chip small">hikka</div>
         </a>
-        <a href="https://leninec.dan.tatar" target="_blank">
+        <a
+          href="https://leninec.dan.tatar"
+          target="_blank"
+        >
           <div class="chip small">leninec</div>
         </a>
-        <a href="https://t.me/ruvds_com_bot" target="_blank">
+        <a
+          href="https://t.me/ruvds_com_bot"
+          target="_blank"
+        >
           <div class="chip small">ruvds</div>
         </a>
-        <a href="https://github.com/hikariatama/anonqa" target="_blank">
+        <a
+          href="https://github.com/hikariatama/anonqa"
+          target="_blank"
+        >
           <div class="chip small">anonqa</div>
         </a>
-        <a href="https://github.com/hikariatama/meddoc" target="_blank">
+        <a
+          href="https://github.com/hikariatama/meddoc"
+          target="_blank"
+        >
           <div class="chip small">meddoc</div>
         </a>
       </div>
     </div>
-    <svg width="0" height="0">
+    <div id="comic-wrapper">
+      <div id="comic-skeleton"></div>
+      <div id="comic">
+        <img
+          id="comic-image"
+          src="#"
+          alt="#"
+        />
+        <div id="comic-title"></div>
+        <div id="comic-date"></div>
+      </div>
+    </div>
+    <svg
+      width="0"
+      height="0"
+    >
       <defs>
-        <filter id="colorChange" color-interpolation-filters="sRGB">
-          <feColorMatrix type="matrix"
+        <filter
+          id="colorChange"
+          color-interpolation-filters="sRGB"
+        >
+          <feColorMatrix
+            type="matrix"
             values="0 0 0 0 0.192
                     0 0 0 0 0.204
                     0 0 0 0 0.294
-                    0 0 0 1 0" />
+                    0 0 0 1 0"
+          />
         </filter>
       </defs>
     </svg>
+    <svg
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <filter id="replaceWhite">
+        <feColorMatrix
+          type="matrix"
+          values="
+              0 0 0 0 0
+              0 0 0 0 0
+              0 0 0 0 0
+              0 0 0 1 0"
+          result="black"
+        />
+        <feFlood
+          flood-color="#e6e7ee"
+          result="newColor"
+        />
+        <feComposite
+          in="newColor"
+          in2="black"
+          operator="in"
+        />
+        <feBlend
+          in="SourceGraphic"
+          in2="#"
+          mode="multiply"
+        />
+      </filter>
+    </svg>
+
+    <script src="index.js"></script>
   </body>
 </html>
