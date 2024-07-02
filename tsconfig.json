@@ -1,13 +1,18 @@
 {
+  "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
     "lib": ["ES6", "ES2015", "dom"],
+    "module": "preserve",
+    "paths": {
+      "$app/*": ["./src/routes/*"],
+      "$lib/*": ["./src/lib/*"]
+    },
+    "strict": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
