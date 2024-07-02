@@ -19,4 +19,13 @@
   </div>
 {/if}
 
+<header>
+  <nav class="flex justify-end items-center p-4 text-gray-500">
+    <div class="flex gap-4 p-2 px-4 border rounded-2xl">
+      <a href="." class="link">home</a>
+      <a href="comic" class="link">comic</a>
+    </div>
+  </nav>
+</header>
+
 <slot />
