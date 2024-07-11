@@ -14,6 +14,14 @@ const config: Config = {
       },
     },
     extend: {
+      boxShadow: {
+        "neon-green":
+          "0 0 .1rem #9ae6b4, 0 0 .1rem #ffffffaa, 0 0 0.6rem #48bb78, inset 0 0 0.3rem #48bb78",
+        "neon-red":
+          "0 0 .2rem #fbb6b9, 0 0 .2rem #ffffffaa, 0 0 0.7rem #f56565, inset 0 0 0.6rem #f56565",
+        "neon-yellow":
+          "0 0 .1rem #ffed4a, 0 0 .1rem #ffffffaa, 0 0 0.6rem #f6e05e, inset 0 0 0.3rem #f6e05e",
+      },
       colors: {
         border: "hsl(var(--border) / <alpha-value>)",
         input: "hsl(var(--input) / <alpha-value>)",

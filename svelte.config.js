@@ -9,6 +9,11 @@ const config = {
     csrf: {
       checkOrigin: false,
     },
+    alias: {
+      $lib: "./src/lib",
+      $app: "./src",
+      $api: "./src/api",
+    },
   },
   paths: {
     base: "/ton-website/",
